@@ -10,7 +10,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DailyFinesCollectionComponent } from './daily-fines-collection/daily-fines-collection.component';
 import { MonthlyExecutionComponent } from './monthly-execution/monthly-execution.component';
 import { MonthlyFinesCollectionComponent } from './monthly-fines-collection/monthly-fines-collection.component';
-
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
+import { WithLoadingPipe } from './with-loading.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,10 @@ import { MonthlyFinesCollectionComponent } from './monthly-fines-collection/mont
     DailyExecutionComponent,
     DailyFinesCollectionComponent,
     MonthlyExecutionComponent,
-    MonthlyFinesCollectionComponent
+    MonthlyFinesCollectionComponent,
+    HeaderComponent,
+    FooterComponent,
+    WithLoadingPipe
   ],
   imports: [
     BrowserModule,

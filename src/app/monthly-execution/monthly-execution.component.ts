@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import sampleData from 'src/json/monthlyExecutionJson.json';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
@@ -11,6 +11,9 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 })
 export class MonthlyExecutionComponent implements OnInit {
 
+  @Input()
+  loading!: boolean;
+  
   dates: any[] = [];
   openCases: any[] = [];
   closeCases: any[] = [];

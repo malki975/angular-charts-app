@@ -1,0 +1,19 @@
+.my-footer {
+    min-height: 118px;
+    bottom: 0px;
+    margin-bottom: 0;
+    background-color: #252726;
+    color: #ffffff;
+}
+
+.footer-line {
+    margin-bottom: 10px;
+    margin-top: 0px;
+}
+
+.pink-line {
+    width: 100%;
+    color: #293955;
+    height: 1px;
+    border-color: #293955;
+}
