@@ -1,20 +1,20 @@
-<div class="jumbotron my-header">
-    <img src="assets/img/logo.png" class="logo" />
-    <h4>רשות האכיפה והגבייה</h4>
-    <h6>סיכום טיפול בתיקים - הנתונים הינם נתוני דמו ואינם אמיתיים!</h6>
-</div>
+<app-header></app-header>
 
 <div class="container my-container">
     <div class="row">
         <div class="col-xl-6 my-chart">
             <h5 style="text-align: center;">תיקים שנפתחו/נסגרו ב-30 יום האחרונים</h5>
             <h6 style="text-align: center;">תיקי הוצל"פ: נתוני דמו</h6>
-            <app-daily-executiuon></app-daily-executiuon>
+            <div *ngIf="obs$ | withLoading | async as obs">
+                <app-daily-executiuon [loading]="obs.loading"></app-daily-executiuon>
+            </div>
         </div>
         <div class="col-xl-6 my-chart">
             <h5 style="text-align: center;">תיקים שנפתחו/נסגרו ב-30 יום האחרונים</h5>
             <h6 style="text-align: center;">תיקי המג"ק: נתוני דמו</h6>
-            <app-daily-fines-collection></app-daily-fines-collection>
+            <div *ngIf="obs$ | withLoading | async as obs">
+                <app-daily-fines-collection [loading]="obs.loading"></app-daily-fines-collection>
+            </div>
         </div>
     </div>
 
@@ -22,17 +22,19 @@
         <div class="col-xl-6 my-chart">
             <h5 style="text-align: center;">תיקים שנפתחו/נסגרו ב-12 חודשים האחרונים</h5>
             <h6 style="text-align: center;">תיקי הוצל"פ: נתוני דמו</h6>
-            <app-monthly-execution></app-monthly-execution>
+            <div *ngIf="obs$ | withLoading | async as obs">
+                <app-monthly-execution [loading]="obs.loading"></app-monthly-execution>
+            </div>
         </div>
         <div class="col-xl-6 my-chart">
             <h5 style="text-align: center;">תיקים שנפתחו/נסגרו ב-12 חודשים האחרונים</h5>
             <h6 style="text-align: center;">תיקי המג"ק: נתוני דמו</h6>
-            <app-monthly-fines-collection></app-monthly-fines-collection>
+            <div *ngIf="obs$ | withLoading | async as obs">
+                <app-monthly-fines-collection [loading]="obs.loading"></app-monthly-fines-collection>
+            </div>
         </div>
     </div>
 
 </div>
-<div class="jumbotron text-center my-footer">
-    <hr class="footer-line pink-line" />
-    <div style="float: right;"> &copy; כל הזכויות שמורות לרשות האכיפה והגבייה</div>
-</div>
+
+<app-footer></app-footer>

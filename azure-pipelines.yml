@@ -10,7 +10,9 @@ resources:
 
 variables:
   # Container registry service connection established during pipeline creation
+
   dockerRegistryServiceConnection: '2932deab-11eb-4f23-b9f6-38ea3431f302'
+
   imageRepository: 'chartsapp'
   containerRegistry: 'angularchartappregistry.azurecr.io'
   dockerfilePath: '$(Build.SourcesDirectory)/Dockerfile'
