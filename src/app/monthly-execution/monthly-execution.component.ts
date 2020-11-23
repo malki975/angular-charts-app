@@ -11,8 +11,8 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 })
 export class MonthlyExecutionComponent implements OnInit {
 
-  @Input()
-  loading!: boolean;
+  // @Input()
+  // loading!: boolean;
   
   dates: any[] = [];
   openCases: any[] = [];

@@ -10,9 +10,12 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
   styleUrls: ['./daily-fines-collection.component.css']
 })
 export class DailyFinesCollectionComponent implements OnInit {
-
-  @Input()
-  loading!: boolean;
+  
+  
+//   public someMethod(){
+//     console.log('I am called after Calendar has loaded.')
+// }
+  
   
   dates: any[] = [];
   openCases: any[] = [];
