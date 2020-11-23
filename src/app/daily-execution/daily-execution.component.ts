@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit, Output, EventEmitter  } from '@angular/core';
 import sampleData from 'src/json/dailyExecutionJson.json';
 import { ChartOptions, ChartType, ChartDataSets } from 'chart.js';
 import { Color, BaseChartDirective, Label } from 'ng2-charts';
@@ -9,10 +9,14 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
   templateUrl: './daily-execution.component.html',
   styleUrls: ['./daily-execution.component.css']
 })
-export class DailyExecutionComponent implements OnInit {
+export class DailyExecutionComponent implements OnInit {  //AfterViewInit  {
 
-  @Input()
-  loading!: boolean;
+
+  //@Output() dailyExecutionLoaded: EventEmitter<boolean> = new EventEmitter();
+
+
+  // @Input()
+  // loading!: boolean;
 
   dates: any[] = [];
   openCases: any[] = [];
@@ -103,4 +107,13 @@ export class DailyExecutionComponent implements OnInit {
   public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
+
+
+//   ngAfterViewInit(){
+//     console.log('DailyExecution Loaded');
+//     this.dailyExecutionLoaded.emit(true);
+// }
+
+
+
 }

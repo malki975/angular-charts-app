@@ -10,7 +10,10 @@
 </head>
 
 <body style="direction: rtl;">
-    <app-root></app-root>
+
+    <div *ngIf="obs$ | withLoading | async as obs">
+        <app-root [loading]="obs.loading"></app-root>
+    </div>
 </body>
 
 </html>
