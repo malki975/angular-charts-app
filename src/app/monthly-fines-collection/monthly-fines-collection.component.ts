@@ -11,8 +11,8 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 })
 export class MonthlyFinesCollectionComponent implements OnInit {
 
-  // @Input()
-  // loading!: boolean;
+  @Input()
+  loading!: boolean;
   
   dates: any[] = [];
   openCases: any[] = [];
@@ -91,9 +91,6 @@ export class MonthlyFinesCollectionComponent implements OnInit {
   ]
 
   constructor() { }
-
-  // ngOnInit(): void {
-  // }
 
   // events
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {

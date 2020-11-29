@@ -11,11 +11,8 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 })
 export class DailyFinesCollectionComponent implements OnInit {
   
-  
-//   public someMethod(){
-//     console.log('I am called after Calendar has loaded.')
-// }
-  
+  @Input()
+  loading!: boolean; 
   
   dates: any[] = [];
   openCases: any[] = [];

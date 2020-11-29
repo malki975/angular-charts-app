@@ -1,9 +1,12 @@
-<div>
+<div *ngIf="!loading else loadingTmpl">
     <div>
         <div style="display: block">
-            <!--width="70" height="350" -->
             <canvas baseChart [datasets]="barChartData" [labels]="barChartLabels" [options]="barChartOptions" [plugins]="barChartPlugins" [legend]="barChartLegend" [chartType]="barChartType" [colors]="barChartColors">
         </canvas>
         </div>
     </div>
 </div>
+
+<ng-template #loadingTmpl>
+    <div class="loader"></div>
+</ng-template>

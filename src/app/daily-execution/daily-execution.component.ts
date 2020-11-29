@@ -5,18 +5,14 @@ import { Color, BaseChartDirective, Label } from 'ng2-charts';
 
 
 @Component({
-  selector: 'app-daily-executiuon',
+  selector: 'app-daily-execution',
   templateUrl: './daily-execution.component.html',
   styleUrls: ['./daily-execution.component.css']
 })
-export class DailyExecutionComponent implements OnInit {  //AfterViewInit  {
+export class DailyExecutionComponent implements OnInit {  
 
-
-  //@Output() dailyExecutionLoaded: EventEmitter<boolean> = new EventEmitter();
-
-
-  // @Input()
-  // loading!: boolean;
+  @Input()
+  loading!: boolean;
 
   dates: any[] = [];
   openCases: any[] = [];
